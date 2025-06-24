@@ -28,8 +28,8 @@ README.md → Este archivo
 
 1. Cloná el repositorio:
 
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/nahuelfd/TP-Python.git
+cd https://github.com/nahuelfd/TP-Python.git
 
 2. Instalá Flask
 
@@ -46,7 +46,7 @@ Este proyecto fue desarrollado con fines educativos. Todas las imágenes y conte
 📩 Contacto
 Desarrollado por:
 
-Eguiazu Mateo
-Martinez Tiago
-Velayos Francisco
+Eguiazu Mateo // 
+Martinez Tiago // 
+Velayos Francisco // 
 Dallavalle Nahuel
