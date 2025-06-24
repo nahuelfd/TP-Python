@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Inicio</title>
+</head>
+<body>
+    <nav class="navegador">
+        <img class="logo-afa" src="{{ url_for('static', filename='logo/Logo_lpf_afa.png') }}" alt="Logo AFA">
+        <ul class="ul-items">
+            <li class="crumb"><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <li class="crumb"><a href="{{ url_for('sedes') }}">Sedes</a></li>
+            <li class="crumb"><a href="{{ url_for('plantel') }}">Plantel</a></li>
+            <li class="crumb"><a href="{{ url_for('palmares') }}">Palmares</a></li>
+            <li class="crumb"><a href="{{ url_for('tienda') }}">Tienda</a></li>
+        </ul>
+        <a href="{{ url_for('contacto') }}">Contacto</a></li>
+    </nav>
+
+    <div class="palmares">
+        <header>
+            <h1>Palmarés de la Selección Argentina</h1>
+        </header>
+        <main>
+            <div class="titulos">
+                <img class="copas-img" src="{{ url_for('static', filename='palmares/copa del mundo.png') }}" alt="Copa Mundial">
+                <h3>Copa Mundial</h3>
+                <p>3</p>
+                <p2>1978 - 1986 - 2022</p2>
+            </div>
+            <div class="titulos">
+                <img class="copas-img" src="{{ url_for('static', filename='palmares/copa america.png') }}" alt="Copa America">
+                <h3>Copa América</h3>
+                <p>16</p>
+                <p2>1921 - 1925 - 1927 - 1929 - 1937 - 1941 - 1945 - 1946 - 1947 - 1955 - 1957 - 1959 - 1991 - 1993 - 2021 - 2024</p2>
+            </div>
+            <div class="titulos">
+                <img class="copas-img" src="{{ url_for('static', filename='palmares/copa confederaciones.png') }}" alt="Copa Confederaciones">
+                <h3>Copa Confederaciones</h3>
+                <p>1</p>
+                <p2>2005</p2>
+            </div>
+            <div class="titulos">
+                <img class="copas-img" src="{{ url_for('static', filename='palmares/medalla olimpica.png') }}" alt="Juegos Olímpicos">
+                <h3>Juegos Olímpicos</h3>
+                <p>2</p>
+                <p2>2004 - 2008</p2>
+            </div>
+            <div class="titulos">
+                <img class="copas-img" src="{{ url_for('static', filename='palmares/finalissima.png') }}" alt="Finalissima">
+                <h3>Finalissima</h3>
+                <p>2</p>
+                <p2>1993 - 2022</p2>
+            </div>
+        </main>
+    </div>
+
+    <div class="sponsors">
+        <a target="_blank" href="https://www.adidas.com.ar/"><img src="{{ url_for('static', filename='logo/main-sponsor-adi.png') }}" alt="LOGO ADIDAS"></a>
+        <a target="_blank" href="https://betwarrior.bet.ar/"><img src="{{ url_for('static', filename='logo/BetW.png') }}" alt="LOGO BETWARRIOR"></a>
+        <a target="_blank" href="https://www.coca-cola.com/ar/es"><img src="{{ url_for('static', filename='logo/sponsor-coca-cola.png') }}" alt="LOGO COCA-COLA"></a>
+        <a target="_blank" href="https://paninistore.com/shp_int_en/"><img src="{{ url_for('static', filename='logo/sponsor-panini.png') }}" alt="LOGO PANINI"></a>
+        <a target="_blank" href="https://www.cervezaschneider.com.ar/"><img src="{{ url_for('static', filename='logo/sponsor-schneider.png') }}" alt="LOGO SCHNEIDER"></a>
+        <a target="_blank" href="https://www.ypf.com/"><img src="{{ url_for('static', filename='logo/sponsor-ypf.png') }}" alt="LOGO YPF"></a>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025. Asociación del Fútbol Argentino. Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

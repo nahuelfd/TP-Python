@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Inicio</title>
+</head>
+<body>
+    <nav class="navegador">
+        <img class="logo-afa" src="{{ url_for('static', filename='logo/Logo_lpf_afa.png') }}" alt="Logo AFA">
+        <ul class="ul-items">
+            <li class="crumb"><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <li class="crumb"><a href="{{ url_for('sedes') }}">Sedes</a></li>
+            <li class="crumb"><a href="{{ url_for('plantel') }}">Plantel</a></li>
+            <li class="crumb"><a href="{{ url_for('palmares') }}">Palmares</a></li>
+            <li class="crumb"><a href="{{ url_for('tienda') }}">Tienda</a></li>
+        </ul>
+        <a href="{{ url_for('contacto') }}">Contacto</a></li>
+    </nav>
+
+    <h1 class="tittle-card">Selección Argentina - Jugadores</h1>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/dibu.jpg') }}" alt="Emiliano Dibu Martínez">
+            <div class="card-content">
+                <h2>Emiliano Martínez</h2>
+                <p class="equipo">Aston Villa - Arquero</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/DE PAUL.jpg') }}" alt="Rodrigo De Paul">
+            <div class="card-content">
+                <h2>Rodrigo De Paul</h2>
+                <p class="equipo">Atletico Madrid - Mediocampista</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/JULIAN ALVAREZ.jpg') }}" alt="Julian Alvarez">
+            <div class="card-content">
+                <h2>Julian Alvarez</h2>
+                <p class="equipo">Atletico Madrid - Delantero</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/MAC ALISTER.jpg') }}" alt="Alexis Mac Allister">
+            <div class="card-content">
+                <h2>Alexis Mac Allister</h2>
+                <p class="equipo">Liverpool - Mediocampista</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/MESSI.jpg') }}" alt="Lionel Messi">
+            <div class="card-content">
+                <h2>Lionel Messi</h2>
+                <p class="equipo">Inter de Miami - Mediocampista</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/MOLINA.jpg') }}" alt="Nahuel Molina">
+            <div class="card-content">
+                <h2>Nahuel Molina</h2>
+                <p class="equipo">Atletico Madrid - Defensor</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/OTAMENDI.jpg') }}" alt="Nicolas Otamendi">
+            <div class="card-content">
+                <h2>Nicolas Otamendi</h2>
+                <p class="equipo">Benfica - Defensor</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/ROMERO.jpg') }}" alt="Cuti Romero">
+            <div class="card-content">
+                <h2>Cristian Romero</h2>
+                <p class="equipo">Tottenham - Defensor</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='Jugadores/TAGLIAFICO.jpg') }}" alt="Nicolas Tagliafico">
+            <div class="card-content">
+                <h2>Nicolas Tagliafico</h2>
+                <p class="equipo">Olympique de Lyon - Defensor</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sponsors">
+        <a target="_blank" href="https://www.adidas.com.ar/"><img src="{{ url_for('static', filename='logo/main-sponsor-adi.png') }}" alt="LOGO ADIDAS"></a>
+        <a target="_blank" href="https://betwarrior.bet.ar/"><img src="{{ url_for('static', filename='logo/BetW.png') }}" alt="LOGO BETWARRIOR"></a>
+        <a target="_blank" href="https://www.coca-cola.com/ar/es"><img src="{{ url_for('static', filename='logo/sponsor-coca-cola.png') }}" alt="LOGO COCA-COLA"></a>
+        <a target="_blank" href="https://paninistore.com/shp_int_en/"><img src="{{ url_for('static', filename='logo/sponsor-panini.png') }}" alt="LOGO PANINI"></a>
+        <a target="_blank" href="https://www.cervezaschneider.com.ar/"><img src="{{ url_for('static', filename='logo/sponsor-schneider.png') }}" alt="LOGO SCHNEIDER"></a>
+        <a target="_blank" href="https://www.ypf.com/"><img src="{{ url_for('static', filename='logo/sponsor-ypf.png') }}" alt="LOGO YPF"></a>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025. Asociación del Fútbol Argentino. Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

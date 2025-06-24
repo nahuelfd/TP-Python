@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Inicio</title>
+</head>
+<body>
+    <nav class="navegador">
+        <img class="logo-afa" src="{{ url_for('static', filename='logo/Logo_lpf_afa.png') }}" alt="Logo AFA">
+        <ul class="ul-items">
+            <li class="crumb"><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <li class="crumb"><a href="{{ url_for('sedes') }}">Sedes</a></li>
+            <li class="crumb"><a href="{{ url_for('plantel') }}">Plantel</a></li>
+            <li class="crumb"><a href="{{ url_for('palmares') }}">Palmares</a></li>
+            <li class="crumb"><a href="{{ url_for('tienda') }}">Tienda</a></li>
+        </ul>
+        <a href="{{ url_for('contacto') }}">Contacto</a></li>
+    </nav>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1d3557;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .precio {
+      color: gray;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .boton {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .boton:hover {
+      background-color: #0056b3;
+    }
+  </style>
+<body>
+
+    <h1>Tienda Oficial - Selección Argentina</h1>
+
+    <div class="grid-container">
+        {% for producto in productos %}
+        <div class="card">
+          <img src="/static/{{ producto.imagen }}" alt="{{ producto.alt }}">
+            <h3>{{ producto.nombre }}</h3>
+            <p class="precio">${{ producto.precio }}</p>
+            <p>Stock: {{ producto.cantidad }}</p>
+            <button class="boton">Comprar</button>
+        </div>
+        {% endfor %}
+    </div>
+
+<div class="sponsors">
+        <a target="_blank" href="https://www.adidas.com.ar/"><img src="{{ url_for('static', filename='logo/main-sponsor-adi.png') }}" alt="Adidas"></a>
+        <a target="_blank" href="https://betwarrior.bet.ar/"><img src="{{ url_for('static', filename='logo/BetW.png') }}" alt="BetWarrior"></a>
+        <a target="_blank" href="https://www.coca-cola.com/ar/es"><img src="{{ url_for('static', filename='logo/sponsor-coca-cola.png') }}" alt="Coca-Cola"></a>
+        <a target="_blank" href="https://paninistore.com/shp_int_en/"><img src="{{ url_for('static', filename='logo/sponsor-panini.png') }}" alt="Panini"></a>
+        <a target="_blank" href="https://www.cervezaschneider.com.ar/"><img src="{{ url_for('static', filename='logo/sponsor-schneider.png') }}" alt="Schneider"></a>
+        <a target="_blank" href="https://www.ypf.com/"><img src="{{ url_for('static', filename='logo/sponsor-ypf.png') }}" alt="YPF"></a>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025. Asociación del Fútbol Argentino. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='contacto.js') }}"></script>
+</body>
+</html>

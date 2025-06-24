@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Inicio</title>
+</head>
+<body>
+    <nav class="navegador">
+        <img class="logo-afa" src="{{ url_for('static', filename='logo/Logo_lpf_afa.png') }}" alt="Logo AFA">
+        <ul class="ul-items">
+            <li class="crumb"><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <li class="crumb"><a href="{{ url_for('sedes') }}">Sedes</a></li>
+            <li class="crumb"><a href="{{ url_for('plantel') }}">Plantel</a></li>
+            <li class="crumb"><a href="{{ url_for('palmares') }}">Palmares</a></li>
+            <li class="crumb"><a href="{{ url_for('tienda') }}">Tienda</a></li>
+        </ul>
+        <a href="{{ url_for('contacto') }}">Contacto</a></li>
+    </nav>
+
+
+    <div class="sedestitulo">
+        <h1>Sedes AFA</h1>
+    </div>
+
+    <div class="estilosedes">
+        <img class="sedesimg" src="{{ url_for('static', filename='sedes/ezeiza1.jpg') }}" alt="Predio Lionel Andres Messi" />
+        <img class="sedesimg" src="{{ url_for('static', filename='sedes/ezeiza2.jpeg') }}" alt="Entrenamiento en el predio" />
+        <img class="sedesimg" src="{{ url_for('static', filename='sedes/sedesocial.jpg') }}" alt="Museo Historico en Sede Social" />
+    </div>
+
+    <div class="sedes">
+        <a href="https://maps.app.goo.gl/WtPXz2YuQhPLmEp9A"><h4><u>Sede Social</u></h4></a>
+        <div class="sedesinfo">
+            <h5>Viamonte 1366 / 76 (C1053ACB) CABA</h5>
+            <h5>Teléfonos: 011 4370 79
+<div class="sponsors">
+        <a target="_blank" href="https://www.adidas.com.ar/"><img src="{{ url_for('static', filename='logo/main-sponsor-adi.png') }}" alt="Adidas"></a>
+        <a target="_blank" href="https://betwarrior.bet.ar/"><img src="{{ url_for('static', filename='logo/BetW.png') }}" alt="BetWarrior"></a>
+        <a target="_blank" href="https://www.coca-cola.com/ar/es"><img src="{{ url_for('static', filename='logo/sponsor-coca-cola.png') }}" alt="Coca-Cola"></a>
+        <a target="_blank" href="https://paninistore.com/shp_int_en/"><img src="{{ url_for('static', filename='logo/sponsor-panini.png') }}" alt="Panini"></a>
+        <a target="_blank" href="https://www.cervezaschneider.com.ar/"><img src="{{ url_for('static', filename='logo/sponsor-schneider.png') }}" alt="Schneider"></a>
+        <a target="_blank" href="https://www.ypf.com/"><img src="{{ url_for('static', filename='logo/sponsor-ypf.png') }}" alt="YPF"></a>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025. Asociación del Fútbol Argentino. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='contacto.js') }}"></script>
+</body>
+</html>

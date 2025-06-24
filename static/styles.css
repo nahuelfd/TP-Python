@@ -1,0 +1,398 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.ul-items {
+    list-style-type: none;
+    margin: 200px;
+    display: flex;
+    gap: 30px;
+  }
+  .ul-items a{
+    text-decoration: none;
+  }
+  .contacto{
+    padding: 20px;
+    text-decoration: none;
+  }
+.navegador {
+    
+    display: flex;
+    width: auto;
+    height: 100px;
+    background-color:#00b7ff;
+    align-items: center;
+    justify-content: space-between;
+}
+.navegador a{
+    
+    font-size: 1.3rem;
+    color: black;
+}
+.navegador a:hover{
+    color:white;
+    transition: 0.3s;
+    
+}
+.logo-afa {
+    margin: 20px;
+    height: 80px;
+    width: auto;
+}
+#resumen {
+  display: flex;
+  margin: 40px 0px;
+  justify-content: space-around;
+}
+.resumen-1, .resumen-2, .resumen-3{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: arial;
+  transition-duration: 0.3s;
+  padding: 5px;
+}
+.resumen-1:hover, .resumen-2:hover, .resumen-3:hover{
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.estadio{
+  margin-bottom: 25px;
+}
+
+.noticia {
+  display: grid;
+  grid-template-areas: 
+    "imagen-1 noticia-1"
+    "noticia-2 imagen-2";
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.noticia-imagen-1,
+.noticia-imagen-2 {
+  width: 100%;
+  height: 100%;
+}
+
+.noticia-imagen-1 img,
+.noticia-imagen-2 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.texto-1 h1, .texto-2 h1 {
+  text-shadow: 5px 5px 10px black ;
+  background-color: #00b7ff;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  font-size: 60px;
+  line-height: 1.6;
+  padding: 15px;
+}
+.texto-1 p, .texto-2 p{
+  line-height: 24px;
+  font-size: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: start;
+  padding: 3px;
+}
+
+.noticia-imagen-1 {
+  grid-area: imagen-1;
+}
+
+.noticia-imagen-2 {
+  grid-area: imagen-2;
+  justify-self: end;
+}
+
+.texto-1 {
+  grid-area: noticia-1;
+}
+
+.texto-2 {
+  grid-area: noticia-2;
+}
+
+.sponsors{
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  background-color: #00b7ff;
+}
+
+.sponsors img{
+  opacity: 0.5;
+}
+
+.sponsors img:hover{
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+footer{
+  color: white;
+  padding: 10px;
+  text-align: center;
+  background-color: #00b7ff;
+}
+
+footer p{
+  opacity: 0.8
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/*Estilos Sedes*/
+.sedestitulo {
+  margin: 40px 80px;
+  font-size: 30px;
+  color: dodgerblue;
+}
+
+.sedes{
+  margin: 70px 80px;
+  font-size: 30px;
+  color: midnightblue;
+  line-height: 80px;
+}
+
+.sedesinfo{
+  font-size: 23px;
+  line-height: 30px;
+  color: black;
+}
+
+.estilosedes{
+  text-align: center;
+}
+
+.sedesimg{
+ height: 300px;
+ width: auto;
+ display: inline-flex;
+ padding: 1%;
+}
+
+.tittle-card {
+  text-align: center;
+  margin: 20px;
+}
+
+/*Estilos plantel*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h2 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+}
+
+.card-content .equipo {
+  color: #555;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Estilos Palmarés*/
+
+.palmares /*modifica texto palmares*/{
+  color: #00b7ff;
+  text-align: center;
+  padding: 3%;
+}
+.palmares .titulos:hover {
+  transition: transform 0.3s;
+  transform: scale(1.08);
+}
+
+.palmares .titulos p {
+  font-size: 1.5rem;
+  font-weight: bold; /*grosor texto*/
+  color: #007bff;
+}
+.palmares .titulos p2 {
+  font-size: 1.3rem;
+}
+.copas-img{ /*tamaño imagenes*/
+  height: 200px;
+  width: auto;
+  margin: 5%;
+}
+
+/*Estilos Contacto*/
+
+/*textarea {
+    resize: vertical;
+    min-height: 100px;
+}*/
+
+body{
+    background-image: url(./Jugadores/Argentine_Football_Association_logo.svg.png);
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    
+    
+}
+
+h1{
+    text-align: center;
+    
+    width: 100%;
+    left: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.div-hijo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+#nombre, #email{
+    width: 20%;
+    height: 20px;
+}
+
+
+
+.div-consulta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+textarea{
+    width: 50%;
+    height: 175px;
+    align-items: center;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00b7ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: black;
+}

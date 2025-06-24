@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Inicio</title>
+</head>
+<body>
+    <nav class="navegador">
+        <img class="logo-afa" src="{{ url_for('static', filename='logo/Logo_lpf_afa.png') }}" alt="Logo AFA">
+        <ul class="ul-items">
+            <li class="crumb"><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <li class="crumb"><a href="{{ url_for('sedes') }}">Sedes</a></li>
+            <li class="crumb"><a href="{{ url_for('plantel') }}">Plantel</a></li>
+            <li class="crumb"><a href="{{ url_for('palmares') }}">Palmares</a></li>
+            <li class="crumb"><a href="{{ url_for('tienda') }}">Tienda</a></li>
+        </ul>
+        <a href="{{ url_for('contacto') }}">Contacto</a></li>
+    </nav>
+
+
+      <div class="container">
+        <h1>Formulario de Contacto</h1>
+        <form id="formulario">
+            
+            <div class="div-hijo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre">
+                <span class="error-message" id="nombre-error"></span>
+            </div>
+            
+            
+            <div class="div-hijo">
+                <label for="email">Correo electrónico*</label>
+                <input type="email" id="email" name="email">
+                <span class="error-message" id="email-error"></span>
+            </div>
+            
+            
+            <div class="div-consulta">
+                <label for="consulta">Consulta*</label>
+                <textarea id="consulta" name="consulta" rows="4"></textarea>
+                <span class="error-message" id="consulta-error"></span>
+                <span id="caracteres"></span>
+            </div>
+            
+            
+            <div class="div-hijo">
+                <label>
+                    <input type="checkbox" id="terminos" name="terminos"> 
+                    Acepto los términos y condiciones
+                </label>
+                <span class="error-message" id="terminos-error"></span>
+            </div>
+            
+            <button class="button" type="submit">Registrarse</button>
+        </form>
+        
+        <div id="success-message" class="success-message"></div>
+    </div>
+    <div class="sponsors">
+        <a target="_blank" href="https://www.adidas.com.ar/"><img src="{{ url_for('static', filename='logo/main-sponsor-adi.png') }}" alt="Adidas"></a>
+        <a target="_blank" href="https://betwarrior.bet.ar/"><img src="{{ url_for('static', filename='logo/BetW.png') }}" alt="BetWarrior"></a>
+        <a target="_blank" href="https://www.coca-cola.com/ar/es"><img src="{{ url_for('static', filename='logo/sponsor-coca-cola.png') }}" alt="Coca-Cola"></a>
+        <a target="_blank" href="https://paninistore.com/shp_int_en/"><img src="{{ url_for('static', filename='logo/sponsor-panini.png') }}" alt="Panini"></a>
+        <a target="_blank" href="https://www.cervezaschneider.com.ar/"><img src="{{ url_for('static', filename='logo/sponsor-schneider.png') }}" alt="Schneider"></a>
+        <a target="_blank" href="https://www.ypf.com/"><img src="{{ url_for('static', filename='logo/sponsor-ypf.png') }}" alt="YPF"></a>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025. Asociación del Fútbol Argentino. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='contacto.js') }}"></script>
+</body>
+</html>
